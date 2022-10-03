@@ -61,36 +61,8 @@ public class Relative {
 
     @Override
     public String toString() {
-        String string;
-        switch (relative) {
-            case SON :
-                string = " сын ";
-                break;
-            case DAUGHTER:
-                string = " дочь ";
-                break;
-            case FATHER:
-                string = " отец ";
-                break;
-            case MOTHER:
-                string = " мать ";
-                break;
-            case BROTHER:
-                string = " брат ";
-                break;
-            case SISTER:
-                string = " сестра ";
-                break;
-            case HUSBAND:
-                string = " муж ";
-                break;
-            case WIFE:
-                string = " жена ";
-                break;
-            default:
-                string = " не родственик ";
-        }
-        return person1.getFirstName() + " " + person1.getSecondName() + string  + person2.getFirstName() +
-                " " + person2.getSecondName();
+
+        return person1.getFirstName() + " " + person1.getSecondName() + getStringRelation(relative) + " " +
+               person2.getFirstName() + " " + person2.getSecondName();
     }
 }
